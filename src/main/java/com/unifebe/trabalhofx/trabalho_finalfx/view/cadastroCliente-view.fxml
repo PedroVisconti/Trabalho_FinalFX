@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.unifebe.trabalhofx.trabalho_finalfx.controller.CadastroClienteController">
+   <children>
+      <AnchorPane accessibleText="000.000.000-00" prefHeight="501.0" prefWidth="681.0">
+         <children>
+            <Pane prefHeight="494.0" prefWidth="773.0" style="-fx-background-color: #554CCD;">
+               <children>
+                  <Label layoutX="40.0" layoutY="20.0" prefHeight="27.0" prefWidth="229.0" text="Cadastro de Cliente" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="29.0" layoutY="54.0" prefHeight="430.0" prefWidth="722.0" style="-fx-background-color: #151033;">
+                     <children>
+                        <Label layoutX="196.0" layoutY="145.0" prefHeight="27.0" prefWidth="229.0" text="Nome:" textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtNome" layoutX="321.0" layoutY="145.0" prefHeight="25.0" prefWidth="150.0" />
+                        <Label layoutX="196.0" layoutY="195.0" prefHeight="27.0" prefWidth="127.0" text="CPF:" textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCPF" layoutX="321.0" layoutY="196.0" prefHeight="25.0" prefWidth="150.0" />
+                        <Button layoutX="363.0" layoutY="273.0" mnemonicParsing="false" onAction="#cadastrarCliente" text="Cadastrar" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children></AnchorPane>
+   </children>
+</VBox>

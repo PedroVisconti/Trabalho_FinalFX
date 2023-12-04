@@ -6,13 +6,13 @@ import java.sql.*;
 //1 = ADM
 //2 = NORMAL
 
-public class usuarioDAO extends BancoDeDados implements IUsuario {
+public class UsuarioDAO extends BancoDeDados implements IUsuario {
 
     private Connection connection;
     private String database = "unifebe";
-    static Usuario usuario_logado = new Usuario();
+    public static Usuario usuario_logado = new Usuario();
 
-    public usuarioDAO() throws SQLException {
+    public UsuarioDAO() throws SQLException {
         this.connection = conectarBanco(database);
     }
 

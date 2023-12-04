@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.unifebe.trabalhofx.trabalho_finalfx.controller.ClienteController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="867.0">
+         <children>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="127.0" prefWidth="969.0">
+               <children>
+                  <Button layoutX="876.0" layoutY="52.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="79.0" text="Consultar" />
+                  <TextField fx:id="brConsulta" layoutX="34.0" layoutY="54.0" prefHeight="25.0" prefWidth="825.0" />
+                  <Label layoutX="34.0" layoutY="28.0" text="Consultar Cliente">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+            <TableView fx:id="tblCliente" layoutX="46.0" layoutY="141.0" prefHeight="426.0" prefWidth="930.0">
+              <columns>
+                <TableColumn fx:id="clID" prefWidth="203.0" text="ID" />
+                <TableColumn fx:id="clNome" minWidth="1.0" prefWidth="481.0" text="Nome" />
+                  <TableColumn fx:id="clCPF" prefWidth="245.0" text="CNPJ/CPF" />
+              </columns>
+            </TableView>
+            <Button layoutX="46.0" layoutY="623.0" mnemonicParsing="false" onAction="#cadastrarCliente" prefHeight="37.0" prefWidth="117.0" text="Cadastrar cliente" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="182.0" layoutY="623.0" mnemonicParsing="false" onAction="#removerCliente" prefHeight="37.0" prefWidth="99.0" text="Apagar" />
+            <Button layoutX="296.0" layoutY="623.0" mnemonicParsing="false" onAction="#alterarCliente" prefHeight="37.0" prefWidth="105.0" text="Editar" />
+         </children></AnchorPane>
+
+   </children>
+
+</VBox>

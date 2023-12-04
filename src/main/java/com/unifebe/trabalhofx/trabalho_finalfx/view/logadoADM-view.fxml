@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Group?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="1110.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="868.0" prefWidth="1192.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.unifebe.trabalhofx.trabalho_finalfx.controller.LogadoController">
    <children>
-      <AnchorPane prefHeight="709.0" prefWidth="1110.0">
+      <AnchorPane prefHeight="720.0" prefWidth="1080.0">
          <children>
-            <Pane prefHeight="706.0" prefWidth="120.0" style="-fx-background-color: #3837B3;">
+            <Pane prefHeight="868.0" prefWidth="120.0" style="-fx-background-color: #3837B3;">
                <children>
-                  <Group layoutX="35.0" layoutY="129.0">
+                  <Group layoutX="33.0" layoutY="187.0">
                      <children>
-                        <Button fx:id="btnFaturamento" alignment="CENTER" maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
+                        <Button fx:id="btnFaturamento" alignment="CENTER" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#telaFaturamento" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -28,7 +23,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="btnCliente" alignment="CENTER" layoutY="89.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
+                        <Button fx:id="btnCliente" alignment="CENTER" layoutY="96.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#telaCliente" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -37,7 +32,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="btnCadastro_produto" alignment="CENTER" layoutY="187.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
+                        <Button fx:id="btnCadastro_produto" alignment="CENTER" layoutY="187.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#telaProdutos" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -64,28 +59,93 @@
                               </ImageView>
                            </graphic>
                         </Button>
+                        <Label layoutX="-12.0" layoutY="40.0" text="Faturamento">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="2.0" layoutY="137.0" prefHeight="19.0" prefWidth="50.0" text="Clientes">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="-2.0" layoutY="223.0" prefHeight="25.0" prefWidth="58.0" text="Produtos" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="-2.0" layoutY="340.0" prefHeight="25.0" prefWidth="58.0" text="Usuarios" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="-18.0" layoutY="438.0" prefHeight="25.0" prefWidth="90.0" text="Configurações" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
                      </children>
                   </Group>
                </children>
             </Pane>
-            <Button fx:id="btnCategoria_Bebidas" layoutX="151.0" layoutY="284.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
-               <graphic>
-                  <ImageView fitHeight="110.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../img/Categorias/Rectangle%2016-1.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button fx:id="btnCategoria_Bebidas1" layoutX="437.0" layoutY="284.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
-               <graphic>
-                  <ImageView fitHeight="110.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../img/Categorias/Rectangle%2016-2.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
+            <Group layoutX="150.0" layoutY="280.0">
+               <children>
+                  <Button fx:id="btnCategoria_Bebidas" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="110.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../img/Categorias/promocao.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnCategoria_Bebidas1" layoutX="270.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="110.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../img/Categorias/bebidas.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnCategoria_Bebidas11" layoutX="270.0" layoutY="140.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="110.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../img/Categorias/lanches.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnCategoria_Bebidas111" layoutY="140.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="110.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../img/Categorias/doces.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnCategoria_Bebidas1111" layoutY="280.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="110.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../img/Categorias/vegetariano.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnCategoria_Bebidas11111" layoutX="270.0" layoutY="280.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="110.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../img/Categorias/salgado.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Group>
             <Label layoutX="143.0" layoutY="225.0" text="Categorias">
                <font>
                   <Font name="System Bold" size="18.0" />
@@ -96,8 +156,42 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TextField layoutX="146.0" layoutY="109.0" prefHeight="38.0" prefWidth="424.0" />
-            <Pane layoutX="680.0" prefHeight="706.0" prefWidth="430.0" style="-fx-background-color: blue;" />
+            <Pane layoutX="763.0" prefHeight="868.0" prefWidth="429.0" style="-fx-background-color: #3837B3;">
+               <children>
+                  <Label layoutX="159.0" layoutY="42.0" text="Lista de itens" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnfaturar" layoutX="277.0" layoutY="775.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: white;" text="Faturar">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="tblProdutosVenda" layoutX="14.0" layoutY="128.0" prefHeight="522.0" prefWidth="404.0">
+                    <columns>
+                      <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
+                        <TableColumn fx:id="clCodigo" prefWidth="86.0" text="Codigo" />
+                        <TableColumn fx:id="clNome" prefWidth="167.0" text="Nome" />
+                        <TableColumn fx:id="clValor" prefWidth="150.0" text="Valor" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="266.0" layoutY="664.0" prefHeight="17.0" prefWidth="142.0" text="Total Venda" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtValorVenda" disable="true" layoutX="266.0" layoutY="684.0" text="0,00" />
+                  <TextField fx:id="txtClienteVenda" disable="true" editable="false" layoutX="14.0" layoutY="684.0" text="Sem Cliente" />
+                  <Label layoutX="14.0" layoutY="666.0" prefHeight="17.0" prefWidth="149.0" text="Cliente da venda" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="31.0" layoutY="772.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" text="Definir Cliente" />
+               </children></Pane>
+            <Button layoutX="637.0" layoutY="107.0" mnemonicParsing="false" onAction="#produtosFaturamento" prefHeight="25.0" prefWidth="110.0" text="Consultar" />
+            <TextField fx:id="brConsultaProduto" layoutX="143.0" layoutY="104.0" prefHeight="31.0" prefWidth="459.0" />
          </children></AnchorPane>
    </children>
 </VBox>

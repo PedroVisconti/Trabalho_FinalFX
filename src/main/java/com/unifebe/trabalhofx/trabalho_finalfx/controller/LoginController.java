@@ -1,34 +1,27 @@
 package com.unifebe.trabalhofx.trabalho_finalfx.controller;
 
-import com.unifebe.trabalhofx.trabalho_finalfx.model.Usuario;
-import com.unifebe.trabalhofx.trabalho_finalfx.model.usuarioDAO;
-import javafx.event.ActionEvent;
+import com.unifebe.trabalhofx.trabalho_finalfx.model.UsuarioDAO;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.sql.SQLException;
-import java.util.EventObject;
 
+import static com.unifebe.trabalhofx.trabalho_finalfx.controller.ViewsController.exibirTela;
 import static com.unifebe.trabalhofx.trabalho_finalfx.controller.ViewsController.trocarTela;
 
 public class LoginController {
 
-    usuarioDAO usuario = new usuarioDAO();
+    UsuarioDAO usuario = new UsuarioDAO();
     @FXML
     private TextField txtusuario;
     @FXML
     private PasswordField txtsenha;
     @FXML
     private Button btnlogin;
+
+    private Stage stage = new Stage();
 
     public LoginController() throws SQLException {
 
@@ -70,4 +63,20 @@ public class LoginController {
         }
     }
 
+    public void realizarCadastro(){
+
+        try{
+            Stage stage = new Stage();
+            exibirTela(stage, "cadastroUsuario-view.fxml", "Cadastrar novo Usuario");
+
+        }catch (IOException e){
+            System.out.println("Não foi possivel abrir a tela de cadastro de novo usuario");
+        }
+
+
+    }
+
+    public Stage getStage() {
+        return stage;
+    }
 }
