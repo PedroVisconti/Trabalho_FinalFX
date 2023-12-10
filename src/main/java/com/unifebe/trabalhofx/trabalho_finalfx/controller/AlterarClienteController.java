@@ -14,6 +14,9 @@ import java.util.ResourceBundle;
 import static com.unifebe.trabalhofx.trabalho_finalfx.controller.ClienteController.getClienteEditar;
 import static com.unifebe.trabalhofx.trabalho_finalfx.controller.ViewsController.exibirTela;
 
+/**
+ * Classe usada para Alteração de cliente na alterarCliente-view.fxml
+ */
 public class AlterarClienteController implements Initializable {
 
     private Cliente clientEditando;
@@ -25,6 +28,11 @@ public class AlterarClienteController implements Initializable {
     private TextField txtCPF;
 
 
+    /**
+     * Este metodo tem como função salvar as alterações do cadastro de cliente
+     * @throws IOException
+     * @author Pedro A. Visconti
+     */
     public void salvarAlteracao() throws IOException {
 
         String nome, CPF;
@@ -51,6 +59,10 @@ public class AlterarClienteController implements Initializable {
 
     }
 
+    /**
+     * Metodo para exibição dos dados de produto que serão editados
+     * @author Pedro A. Visconti
+     */
     public void exibirDadosProdutoEditar(){
 
         try{
@@ -67,6 +79,12 @@ public class AlterarClienteController implements Initializable {
 
     }
 
+    /**
+     * Chamado na inicialização da Stage para carregar os dados do produto
+     * @param url
+     * @param resourceBundle
+     * @author Pedro A. Visconti
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         exibirDadosProdutoEditar();

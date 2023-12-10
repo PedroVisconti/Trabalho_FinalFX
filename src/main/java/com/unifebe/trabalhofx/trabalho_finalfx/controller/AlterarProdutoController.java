@@ -22,6 +22,10 @@ import java.util.ResourceBundle;
 import static com.unifebe.trabalhofx.trabalho_finalfx.controller.ProdutosController.getProdutoEditar;
 import static com.unifebe.trabalhofx.trabalho_finalfx.controller.ViewsController.exibirTela;
 
+/**
+ * Classe usada para alteração dos dados de produto pelo alterarProduto-view.fxml
+ * @author Pedro A. Visconti
+ */
 public class AlterarProdutoController implements Initializable {
 
     private Produto produtoEditando;
@@ -37,10 +41,19 @@ public class AlterarProdutoController implements Initializable {
     @FXML
     private TextField txtValor;
 
+    /**
+     * Construtor da classe AlterarProdutoController
+     * @throws SQLException
+     * @author Pedro A. Visconti
+     */
     public AlterarProdutoController() throws SQLException {
 
     }
 
+    /**
+     * Metodo usado para mostrar os dados dos produtos que serão editadosw
+     * @author Pedro A. Visconti
+     */
     public void exibirDadosProdutoEditar(){
 
         try{
@@ -57,6 +70,11 @@ public class AlterarProdutoController implements Initializable {
 
     }
 
+    /**
+     * Carrega as categorias do produtos
+     * @author Pedro A. Visconti
+     */
+
     public void carregarCategorias(){
         try{
             Categoria_produtosDAO categorias = new Categoria_produtosDAO();
@@ -69,6 +87,12 @@ public class AlterarProdutoController implements Initializable {
             throw new RuntimeException(e);
         }
     }
+
+    /**
+     * Metodo para salvar as alterações realizadas no produto
+     * @throws IOException
+     * @author Pedro A. Visconti
+     */
 
     public void salvarAlteracao() throws IOException {
 
@@ -99,7 +123,12 @@ public class AlterarProdutoController implements Initializable {
 
     }
 
-
+    /**
+     * Chamado na inicialização da Scene, para realizar o carregamento das categorias e os dados dos produtos a ser editado
+     * @param url
+     * @param resourceBundle
+     * @author Pedro A. Visconti
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

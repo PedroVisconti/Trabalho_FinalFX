@@ -13,6 +13,10 @@ import java.sql.SQLException;
 
 import static com.unifebe.trabalhofx.trabalho_finalfx.controller.ViewsController.trocarTela;
 
+/**
+ * Classe usada para realizar o cadastro de Usuarios no sistema
+ * @author Pedro A. Visconti
+ */
 public class CadastroUsuarioController {
 
     @FXML
@@ -28,8 +32,9 @@ public class CadastroUsuarioController {
 
 
     /**
-     * Metodo para realizar o cadastro do usuario atraves da tela de login do sistema
+     * Metodo para realizar o cadastro do usuario atraves da tela de login do sistema,
      * pegando os dados inseridos e gerando um objeto do tipo usuario que ira ser salvo no banco de dados
+     * @author Pedro A. Visconti
      */
     public void realizarCadastro() {
 

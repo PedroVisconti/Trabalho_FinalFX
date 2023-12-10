@@ -1,5 +1,6 @@
 package com.unifebe.trabalhofx.trabalho_finalfx.controller;
 
+import com.unifebe.trabalhofx.trabalho_finalfx.model.Carrinho;
 import com.unifebe.trabalhofx.trabalho_finalfx.model.Produto;
 import com.unifebe.trabalhofx.trabalho_finalfx.model.ProdutoDAO;
 import javafx.collections.FXCollections;
@@ -14,7 +15,10 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
-
+/**
+ * Classe usada pelo modulo de produtos a serem selecionados para o faturamento
+ * @author Pedro A. Visconti
+ */
 public class ProdutosFaturamentoController implements Initializable {
 
     private ProdutoDAO produtoDAO = new ProdutoDAO();
@@ -33,12 +37,23 @@ public class ProdutosFaturamentoController implements Initializable {
     @FXML
     private TextField brConsulta;
 
+    /**
+     * Adiciona o item seleciona no carrinho
+     * @author Pedro A. Visconti
+     */
     public void adicionarCarrinho(){
         produto = tblProdutos.getSelectionModel().getSelectedItem();
-        //LogadoController logado = new LogadoController();
-        LogadoController.adicionarItensCarrinho(produto);
+        Carrinho.adicionarItem(produto);
+
     }
 
+    /**
+     * Metodo chamado na inicialização da Stage, setando a String do nome do produto na barra de consulta
+     * e chamando o metodo mostrarProdutos()
+     * @param url
+     * @param resourceBundle
+     * @author Pedro A. Visconti
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -61,6 +76,12 @@ public class ProdutosFaturamentoController implements Initializable {
 
     }
 
+    /**
+     * Exibe a lista de produtos do sistema, levando em consideração o texto digitado na barra de consulta. Caso
+     * não seja digitado nada, ira ser mostrado a lista de todos os produtos do sistema
+     * @throws SQLException
+     * @author Pedro A. Visconti
+     */
     public void mostrarProdutos() throws SQLException {
         String produto = brConsulta.getText();
         if(produto == null){
@@ -70,11 +91,22 @@ public class ProdutosFaturamentoController implements Initializable {
         }
     }
 
+    /**
+     * Realiza a consulta do produto digitado na barra, chamando o metodo mostrarProdutos()
+     * @throws SQLException
+     * @author Pedro A. Visconti
+     */
     public void realizarConsulta() throws SQLException {
         obsList = null;
         mostrarProdutos();
     }
 
+    /**
+     * Metodo para carregar a lista de produtos
+     * @param produtos Lista de produtos a ser carregados
+     * @throws SQLException
+     * @author Pedro A. Visconti
+     */
     public void carregarListaProdutos(List<Produto> produtos) throws SQLException {
         obsList = FXCollections.observableArrayList(produtos);
         tblProdutos.setItems(obsList);

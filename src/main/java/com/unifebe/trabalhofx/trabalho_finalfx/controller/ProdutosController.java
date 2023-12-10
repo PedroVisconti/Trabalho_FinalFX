@@ -18,6 +18,10 @@ import java.util.ResourceBundle;
 
 import static com.unifebe.trabalhofx.trabalho_finalfx.controller.ViewsController.exibirTela;
 
+/**
+ * Classe usada para o modulo de produtos do sistema
+ * @author Pedro A. Visconti
+ */
 public class ProdutosController  implements Initializable {
 
     private ProdutoDAO produtoDAO = new ProdutoDAO();
@@ -40,10 +44,19 @@ public class ProdutosController  implements Initializable {
     private TableColumn<Produto, Double> clValor;
 
 
+    /**
+     * Retorna o produto a ser editado pelo usuario
+     * @return produto a ser editado
+     * @author Pedro A. Visconti
+     */
     public static Produto getProdutoEditar() {
         return produtoEditar;
     }
 
+    /**
+     * Exibe a tela de cadastro de produtos do sistema
+     * @author Pedro A. Visconti
+     */
     @FXML
     public void telaCadastrarProduto(){
 
@@ -56,6 +69,11 @@ public class ProdutosController  implements Initializable {
         }
     }
 
+    /**
+     * Apaga um produto do sistema e exibe a lista novamente pelo metodo carregarListaProdutos()
+     * @throws SQLException
+     * @author Pedro A. Visconti
+     */
     @FXML
     public void removerProduto() throws SQLException {
 
@@ -64,6 +82,11 @@ public class ProdutosController  implements Initializable {
 
     }
 
+    /**
+     * Metodo para exibição da tela de edição de produto, verificando se o usuario selecionaou um produto da lista
+     * @throws IOException
+     * @author Pedro A. Visconti
+     */
     @FXML
     public void editarProduto() throws IOException {
 
@@ -80,6 +103,12 @@ public class ProdutosController  implements Initializable {
 
     }
 
+    /**
+     * Meotdo chamado na inicialização da Stage, chamando o metodo carregarListaProdutos()
+     * @param url
+     * @param resourceBundle
+     * @author Pedro A. Visconti
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -98,6 +127,11 @@ public class ProdutosController  implements Initializable {
 
     }
 
+    /**
+     * Metodo para realizar o carregamento da lista de produtos
+     * @throws SQLException
+     * @author Pedro A. Visconti
+     */
     public void carregarListaProdutos() throws SQLException {
 
         produtoDAO = new ProdutoDAO();

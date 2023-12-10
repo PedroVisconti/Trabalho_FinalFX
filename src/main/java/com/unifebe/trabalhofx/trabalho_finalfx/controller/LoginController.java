@@ -35,16 +35,20 @@ public class LoginController {
             String login, senha;
             login = txtusuario.getText();
             senha = txtsenha.getText();
+            String scr;
+            String nome_pagina;
 
             if(usuario.login(login, senha)){
                 switch (usuario.getIDUsuario_logado()){
                     case 1:
-                        String scr = "logadoADM-view.fxml";
-                        String nome_pagina = "Bem vindo " + usuario.getNomeUsuario_logado() + "" + usuario.getSobrenomeUsuario_logado();
+                        scr = "logadoADM-view.fxml";
+                        nome_pagina = "Bem vindo " + usuario.getNomeUsuario_logado() + "" + usuario.getSobrenomeUsuario_logado();
                         trocarTela(scr, nome_pagina);
                         break;
                     case 2:
-
+                        scr = "logadoNORMAL-view.fxml";
+                        nome_pagina = "Bem vindo " + usuario.getNomeUsuario_logado() + "" + usuario.getSobrenomeUsuario_logado();
+                        trocarTela(scr, nome_pagina);
                         break;
                 }
             }else {

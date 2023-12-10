@@ -6,6 +6,11 @@ import java.sql.*;
 //1 = ADM
 //2 = NORMAL
 
+/**
+ * Classe para controle da tabela Usuario no banco de dados
+ * @extend BancoDeDados
+ * @author Pedro A. Visconti
+ */
 public class UsuarioDAO extends BancoDeDados implements IUsuario {
 
     private Connection connection;

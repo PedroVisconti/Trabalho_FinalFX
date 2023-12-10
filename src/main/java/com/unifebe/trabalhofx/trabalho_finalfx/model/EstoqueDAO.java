@@ -4,15 +4,31 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * Classe para controle da tabela estoque
+ * @extends Banco de Dados
+ * @author Pedro A. Visconti
+ */
 public class EstoqueDAO extends BancoDeDados {
 
     private Connection connection;
     private String database = "unifebe";
 
+    /**
+     * Construtor da classe EstoqueDAO, chamando o metodo conectarBanco()
+     * @throws SQLException
+     * @author Pedro A. Visconti
+     */
     public EstoqueDAO() throws SQLException {
         this.connection = conectarBanco(database);
     }
 
+    /**
+     * Metodo para salvar o estoque do produto no banco de dados
+     * @param estoque estoque a ser salvo
+     * @throws SQLException
+     * @author Pedro A. Visconti
+     */
     public void salvarEstoque(Estoque estoque) throws SQLException {
         PreparedStatement prts = null;
         try {

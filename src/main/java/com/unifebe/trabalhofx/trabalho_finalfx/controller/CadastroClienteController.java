@@ -11,6 +11,10 @@ import java.sql.SQLException;
 
 import static com.unifebe.trabalhofx.trabalho_finalfx.controller.ViewsController.exibirTela;
 
+/**
+ * Classe usadada pelo cadastroCliente-view.fxml para realizar o cadastro de cliente no sistema
+ * @author Pedro A. Visconti
+ */
 public class CadastroClienteController {
 
     @FXML
@@ -18,6 +22,11 @@ public class CadastroClienteController {
     @FXML
     private TextField txtCPF;
 
+    /**
+     * Usado para realziar o cadastro dos dados de clientes no sistema
+     * @throws IOException
+     * @author Pedro A. Visconti
+     */
     public void cadastrarCliente() throws IOException {
 
         String nome = txtNome.getText(), CPF = txtCPF.getText();

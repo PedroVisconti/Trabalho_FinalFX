@@ -16,6 +16,10 @@ import java.util.ResourceBundle;
 
 import static com.unifebe.trabalhofx.trabalho_finalfx.controller.ViewsController.fecharTela;
 
+/**
+ * Classe usada para realizar o cadastro de produtos no sistema através do cadastroProduto-view.fxml
+ * @author Pedro A. Visconti
+ */
 public class CadastroProdutoController implements Initializable {
 
     @FXML
@@ -28,6 +32,10 @@ public class CadastroProdutoController implements Initializable {
     private TextField txtValor;
 
 
+    /**
+     *Metodo para pegar os dados inseridos nos campos e cadastrar o produto no sistema
+     * @author Pedro A. Visconti
+     */
     @FXML
     public void cadastrarProduto() {
 
@@ -78,7 +86,11 @@ public class CadastroProdutoController implements Initializable {
     }
 
 
-
+    /**
+     * Metodo chamado na inicialização da Stage para realizar o carregamento da lista de categorias
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try{

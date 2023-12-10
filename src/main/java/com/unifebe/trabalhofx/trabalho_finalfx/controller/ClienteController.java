@@ -21,6 +21,10 @@ import java.util.ResourceBundle;
 
 import static com.unifebe.trabalhofx.trabalho_finalfx.controller.ViewsController.exibirTela;
 
+/**
+ * Classe usada para os modulos referentes a cliente no sistema, através do Cliente-view.fxml
+ * @author Pedro A. Visconti
+ */
 public class ClienteController implements Initializable {
 
     private ClienteDAO clienteDAO= new ClienteDAO();
@@ -36,11 +40,20 @@ public class ClienteController implements Initializable {
     private TableColumn<Cliente, String > clCPF;
 
 
+    /**
+     * Retorna o cliente a ser editado
+     * @return Cliente a ser editado
+     * @author Pedro A. Visconti
+     */
     public static Cliente getClienteEditar() {
         return clienteEditar;
     }
 
-
+    /**
+     * Exibe a tela de cadastro de clientes
+     * @throws IOException
+     * @author Pédro A. Visconti
+     */
     @FXML
     public void cadastrarCliente() throws IOException {
 
@@ -48,6 +61,11 @@ public class ClienteController implements Initializable {
 
     }
 
+    /**
+     * Remove o cadastro do cliente selecionado
+     * @throws SQLException
+     * @author Pedro A. Visconti
+     */
     @FXML
     public void removerCliente() throws SQLException {
 
@@ -56,6 +74,12 @@ public class ClienteController implements Initializable {
 
     }
 
+    /**
+     * Exibe a tela para alterar o cadastro de um cliente no sistema,
+     * verificando se foi selecionado algum cliente da lista
+     * @throws IOException
+     * @author Pedro A. Visconti
+     */
     @FXML
     public void alterarCliente() throws IOException {
 
@@ -70,6 +94,11 @@ public class ClienteController implements Initializable {
         }
     }
 
+    /**
+     * Metodo chamado na inicialização da Stage, chamando o metodo carregarLista();
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -85,6 +114,11 @@ public class ClienteController implements Initializable {
 
     }
 
+    /**
+     * Usado para carregar a lista de clientes cadastrados no sistema
+     * @throws SQLException
+     * @author Pedro A. Visconti
+     */
     public void carregarLista() throws SQLException {
 
         clienteDAO = new ClienteDAO();

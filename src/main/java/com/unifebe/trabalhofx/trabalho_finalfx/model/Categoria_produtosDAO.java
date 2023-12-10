@@ -7,15 +7,31 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe para controle da tabela Categoria_produto no banco de dados
+ * @extends Banco de Dados
+ * @author Pedro A. Visconti
+ */
 public class Categoria_produtosDAO extends BancoDeDados {
 
     private Connection connection;
     private String database = "unifebe";
 
+    /**
+     * Construtor da classe, chamando o metodo conectarBanco() para realizar a conexão
+     * @throws SQLException
+     * @author Pedro A. Visconti
+     */
     public Categoria_produtosDAO() throws SQLException {
         this.connection = conectarBanco(database);
     }
 
+    /**
+     * Metodo para recurar do banco de dados as categorias de produto
+     * @return lista de categorias
+     * @throws SQLException
+     * @author Pedro A. Visconti
+     */
     public List<Categoria_produto> listarCategorias() throws SQLException {
 
         PreparedStatement pstmt = null;
@@ -48,6 +64,13 @@ public class Categoria_produtosDAO extends BancoDeDados {
 
     }
 
+    /**
+     * Retorna uma categoria com base no seu ID
+     * @param id id da categoria
+     * @return Categoria do ID
+     * @throws SQLException
+     * @author Pedro A. Visconti
+     */
     public Categoria_produto retornarCategoria(int id) throws SQLException {
         PreparedStatement pstmt = null;
         ResultSet rs = null;
