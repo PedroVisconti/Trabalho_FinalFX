@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.unifebe.trabalhofx.trabalho_finalfx.controller.UsuarioController">
+   <children>
+      <AnchorPane prefHeight="613.0" prefWidth="999.0">
+         <children>
+            <TableView fx:id="tblUsuario" layoutX="46.0" layoutY="65.0" prefHeight="530.0" prefWidth="909.0">
+              <columns>
+                <TableColumn fx:id="clID" prefWidth="173.0" text="ID" />
+                <TableColumn fx:id="clNome" minWidth="1.0" prefWidth="301.0" text="Nome" />
+                  <TableColumn fx:id="clLogin" prefWidth="455.0" text="Login" />
+              </columns>
+            </TableView>
+            <Button layoutX="46.0" layoutY="623.0" mnemonicParsing="false" onAction="#cadastrarUsuario" prefHeight="37.0" prefWidth="117.0" text="Cadastrar Usuario" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="175.0" layoutY="623.0" mnemonicParsing="false" onAction="#apagarUsuario" prefHeight="37.0" prefWidth="99.0" text="Apagar" />
+            <Button layoutX="296.0" layoutY="623.0" mnemonicParsing="false" onAction="#editarUsuario" prefHeight="37.0" prefWidth="105.0" text="Editar" />
+         </children></AnchorPane>
+
+   </children>
+
+</VBox>

@@ -9,7 +9,7 @@ import java.sql.*;
  * @extend Banco de Dados
  * @author Pedro A. Visconti
  */
-public class VendaDAO extends BancoDeDados {
+public class VendaDAO extends BancoDeDados implements IVenda{
 
     private Connection connection;
     private String database = "unifebe";
@@ -60,7 +60,7 @@ public class VendaDAO extends BancoDeDados {
     }
 
     /**
-     * Metodo para retornar o ID da ultima venda
+     * Metodo para retornar o ID da última venda
      * @return retorna o ID da ultima venda
      * @author Pedro A. Visconti
      */

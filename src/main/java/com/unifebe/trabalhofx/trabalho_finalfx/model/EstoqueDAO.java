@@ -9,7 +9,7 @@ import java.sql.SQLException;
  * @extends Banco de Dados
  * @author Pedro A. Visconti
  */
-public class EstoqueDAO extends BancoDeDados {
+public class EstoqueDAO extends BancoDeDados implements IEstoque {
 
     private Connection connection;
     private String database = "unifebe";

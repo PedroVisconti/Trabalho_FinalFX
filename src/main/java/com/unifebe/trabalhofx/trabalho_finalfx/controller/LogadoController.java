@@ -157,6 +157,16 @@ public class LogadoController  implements Initializable {
 
     }
 
+    public void usuarios(){
+        try{
+
+            exibirTela(stage, "Usuarios-view.fxml", "Usuarios");
+
+        }catch (Exception e){
+
+        }
+    }
+
     /**
      * Metodo para realziar o faturamento do carrinho de itens
      * @throws SQLException

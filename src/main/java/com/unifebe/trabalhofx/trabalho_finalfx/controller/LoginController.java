@@ -11,6 +11,10 @@ import java.sql.SQLException;
 import static com.unifebe.trabalhofx.trabalho_finalfx.controller.ViewsController.exibirTela;
 import static com.unifebe.trabalhofx.trabalho_finalfx.controller.ViewsController.trocarTela;
 
+/**
+ * Classe responsavel pelo controle de login no sitema
+ * @author Pedro A. Visconti
+ */
 public class LoginController {
 
     UsuarioDAO usuario = new UsuarioDAO();
@@ -21,13 +25,19 @@ public class LoginController {
     @FXML
     private Button btnlogin;
 
-    private Stage stage = new Stage();
+    private static Stage stage = new Stage();
+
+
 
     public LoginController() throws SQLException {
 
     }
 
 
+    /**
+     * Metodo para realizar login no sitema
+     * @author Pedro A. Visconti
+     */
     @FXML
     public void realizarLogin(){
         try{
@@ -67,10 +77,14 @@ public class LoginController {
         }
     }
 
+    /**
+     * Exibe a tela de cadastro de novos usuarios fora do sistema
+     * @author Pedro A. Visconti
+     */
     public void realizarCadastro(){
 
         try{
-            Stage stage = new Stage();
+
             exibirTela(stage, "cadastroUsuario-view.fxml", "Cadastrar novo Usuario");
 
         }catch (IOException e){
@@ -80,7 +94,7 @@ public class LoginController {
 
     }
 
-    public Stage getStage() {
+    public static Stage getStage() {
         return stage;
     }
 }

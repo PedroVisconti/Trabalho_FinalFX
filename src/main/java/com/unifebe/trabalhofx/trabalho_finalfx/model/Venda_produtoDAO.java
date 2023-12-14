@@ -10,7 +10,7 @@ import java.util.List;
  * @extend BancoDeDaods
  * @author Pedro A. Visconti
  */
-public class Venda_produtoDAO extends BancoDeDados {
+public class Venda_produtoDAO extends BancoDeDados implements IVenda_produto {
 
     private Connection connection;
     private String database = "unifebe";

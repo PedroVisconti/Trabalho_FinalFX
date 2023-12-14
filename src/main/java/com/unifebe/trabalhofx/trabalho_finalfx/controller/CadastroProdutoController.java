@@ -33,7 +33,7 @@ public class CadastroProdutoController implements Initializable {
 
 
     /**
-     *Metodo para pegar os dados inseridos nos campos e cadastrar o produto no sistema
+     * Metodo para pegar os dados inseridos nos campos e cadastrar o produto no sistema
      * @author Pedro A. Visconti
      */
     @FXML
@@ -90,6 +90,7 @@ public class CadastroProdutoController implements Initializable {
      * Metodo chamado na inicialização da Stage para realizar o carregamento da lista de categorias
      * @param url
      * @param resourceBundle
+     * @author Pedro A. Visconti
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

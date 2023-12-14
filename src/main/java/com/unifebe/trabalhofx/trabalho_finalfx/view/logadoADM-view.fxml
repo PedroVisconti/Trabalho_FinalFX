@@ -41,7 +41,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="btnUsuario" alignment="CENTER" layoutY="301.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
+                        <Button fx:id="btnUsuario" alignment="CENTER" layoutY="301.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#usuarios" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" fillWidth="false" prefHeight="396.0" prefWidth="636.0" spacing="20.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.unifebe.trabalhofx.trabalho_finalfx.controller.AlterarUsuarioController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <AnchorPane prefHeight="490.0" prefWidth="680.0">
+         <children>
+            <Pane layoutX="1.0" prefHeight="490.0" prefWidth="303.0" style="-fx-background-color: deepskyblue;" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="121.0" fitWidth="190.0" layoutX="57.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="80.0" layoutY="214.0" text="SUPER" textFill="#151033">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="97.0" layoutY="274.0" prefHeight="39.0" prefWidth="110.0" text="SOFTWARE" textAlignment="CENTER" textFill="#fffefe">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="304.0" layoutY="-1.0" prefHeight="490.0" prefWidth="375.0" style="-fx-background-color: #151033;">
+               <children>
+                  <Button fx:id="btnCadastrar" layoutX="155.0" layoutY="297.0" mnemonicParsing="false" onAction="#salvarAlteracao" prefHeight="25.0" prefWidth="165.0" style="-fx-background-color: blue; -fx-border-radius: solid;" text="Cadastrar" textFill="WHITE" />
+                  <Label alignment="CENTER" layoutX="40.0" layoutY="215.0" prefHeight="25.0" prefWidth="91.0" text="Usuario:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtUsuario" layoutX="155.0" layoutY="215.0" prefHeight="25.0" prefWidth="165.0" />
+                  <Label alignment="CENTER" layoutX="40.0" layoutY="255.0" prefHeight="25.0" prefWidth="91.0" text="Senha:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="txtSenha" layoutX="155.0" layoutY="255.0" prefHeight="25.0" prefWidth="165.0" style="-fx-border-radius: solid;" />
+                  <Label alignment="CENTER" layoutX="40.0" layoutY="175.0" prefHeight="25.0" prefWidth="91.0" text="Sobrenome:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtSobrenome" layoutX="155.0" layoutY="175.0" prefHeight="25.0" prefWidth="165.0" />
+                  <Label alignment="CENTER" layoutX="40.0" layoutY="135.0" prefHeight="25.0" prefWidth="91.0" text="Nome:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtNome" layoutX="155.0" layoutY="135.0" prefHeight="25.0" prefWidth="165.0" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

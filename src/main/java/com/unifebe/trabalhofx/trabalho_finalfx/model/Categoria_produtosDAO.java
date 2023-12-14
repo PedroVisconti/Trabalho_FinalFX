@@ -12,7 +12,7 @@ import java.util.List;
  * @extends Banco de Dados
  * @author Pedro A. Visconti
  */
-public class Categoria_produtosDAO extends BancoDeDados {
+public class Categoria_produtosDAO extends BancoDeDados implements ICategoria_produto {
 
     private Connection connection;
     private String database = "unifebe";
@@ -22,7 +22,7 @@ public class Categoria_produtosDAO extends BancoDeDados {
      * @throws SQLException
      * @author Pedro A. Visconti
      */
-    public Categoria_produtosDAO() throws SQLException {
+    public void Categoria_produtosDAO() throws SQLException {
         this.connection = conectarBanco(database);
     }
 

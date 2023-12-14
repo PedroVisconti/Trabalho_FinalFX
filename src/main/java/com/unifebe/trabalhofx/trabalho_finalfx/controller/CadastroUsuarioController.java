@@ -8,10 +8,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-import java.io.IOException;
 import java.sql.SQLException;
 
-import static com.unifebe.trabalhofx.trabalho_finalfx.controller.ViewsController.trocarTela;
+import static com.unifebe.trabalhofx.trabalho_finalfx.controller.ViewsController.fecharTela;
 
 /**
  * Classe usada para realizar o cadastro de Usuarios no sistema
@@ -65,13 +64,9 @@ public class CadastroUsuarioController {
             }
         }finally {
 
-            try{
+            fecharTela(LoginController.getStage());
 
-                trocarTela("login-view.fxml","Sistema Super de gestão");
 
-            }catch (IOException e){
-
-            }
         }
 
 
